@@ -14,6 +14,7 @@ namespace MockEksamen.Tests
 
         /// <summary>
         /// Test som gerne bør fejl fordi model er sat til null og den som forventes er "toyota"
+        /// Null exception kommer frem med at den ikke må sættes til nul.
         /// </summary>
         [TestMethod()]
         //[ExpectedException(typeof(ArgumentNullException))]
@@ -30,8 +31,7 @@ namespace MockEksamen.Tests
             Assert.AreEqual("Toyota", model);
         }
 
-
-
+       
 
         //IGNORER 
         //[TestMethod()]
@@ -47,7 +47,6 @@ namespace MockEksamen.Tests
         //    Assert.AreEqual(2, door);
         //}
 
-        //IGNORER 
         //[TestMethod()]
         //[ExpectedException(typeof(ArgumentNullException))]
         //public void ModelTest()
