@@ -8,12 +8,40 @@ namespace MockEksamen
 {
     public class Car
     {
-        public int doors { get; set; }
-        public string model { get; set; }
-        public string registrationNo { get; set; }
         public enum color { Black, White, Gray, Red, Green, Blue };
 
+        public int doors
+        {
+            get { return doors; }
+            set
+            {
+                if (value > 5)
+                    throw new InvalidOperationException();
+                doors = value;
+            }
+        }
 
+        public string registrationNo
+        {
+            get { return registrationNo; }
+            set
+            {
+                if (value.Length == 7)
+                    throw new InvalidOperationException();
+                registrationNo = value;
+            }
+        }
+
+        public string model
+        {
+            get { return model; }
+            set
+            {
+                if (value != null)
+                    throw new InvalidOperationException();
+                model = value;
+            }
+        }
 
         public Car()
         {
