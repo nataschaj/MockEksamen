@@ -38,7 +38,7 @@ namespace MockEksamen
             set
             {
                 if (value.Length != 7)
-                    throw new InvalidOperationException("længden skal være 7 bogstaver");
+                    throw new ArgumentNullException("længden skal være 7 bogstaver");
                 registrationNo = value;
             }
         }
