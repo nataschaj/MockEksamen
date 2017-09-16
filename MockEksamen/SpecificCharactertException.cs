@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 namespace MockEksamen
 {
     /// <summary>
-    /// Exception når der står for lidt bogstaver/tegn
+    /// Skal indeholde en fast længde, ellers bliver denne exception smidt
     /// </summary>
-    class CharacterTooShortException : Exception
+    class SpecificCharactertException : Exception
     {
-
     }
 }

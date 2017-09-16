@@ -18,7 +18,9 @@ namespace MockEksamen
             set
             {
                 if (value.Length < 4)
+                {
                     throw new CharacterTooShortException();
+                }
                 name = value;
             }
         }
@@ -38,7 +40,9 @@ namespace MockEksamen
             set
             {
                 if (value.Length != 8)
-                    throw new ArgumentException();
+                {
+                    throw new SpecificCharactertException();
+                }
                 phone = value;
             }
         }
@@ -53,7 +57,9 @@ namespace MockEksamen
             set
             {
                 if (value.Length < 6)
-                    throw new ArgumentException("Længden er mindre end 6! ");
+                {
+                    throw new CharacterTooShortException();
+                }
                 adress = value;
             }
         }

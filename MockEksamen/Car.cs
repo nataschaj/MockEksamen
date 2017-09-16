@@ -23,7 +23,9 @@ namespace MockEksamen
             set
             {
                 if (value > 5)
+                {
                     throw new IllegalDoorsException();
+                }
                 doors = value;
             }
         }
@@ -38,7 +40,9 @@ namespace MockEksamen
             set
             {
                 if (value.Length != 7)
-                    throw new CharacterTooShortException();
+                {
+                    throw new SpecificCharactertException();
+                }
                 registrationNo = value;
             }
         }
@@ -52,9 +56,11 @@ namespace MockEksamen
             get { return model; }
             set
             {
-                if (value == null)
+                if (value == "" || value == null)
+                {
                     throw new ArgumentNullException("Må ikke være null");
-                model = NotNullModel();
+                }
+                model = value;
             }
         }
 
@@ -80,9 +86,9 @@ namespace MockEksamen
             this.RegistrationNo = registrationNo;
         }
 
-        public string NotNullModel()
-        {
-            return model ?? null;
-        }
+        //public string NotNullModel()
+        //{
+        //    return model ?? null;
+        //}
     }
 }
