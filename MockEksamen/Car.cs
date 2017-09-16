@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace MockEksamen
 {
+    /// <summary>
+    /// Enum som indeholder bil farverne 
+    /// </summary>
+    public enum color { Black, White, Gray, Red, Green, Blue };
     public class Car
     {
 
         /// <summary>
         /// Enum som indeholder bil farverne 
         /// </summary>
-        public enum color { Black, White, Gray, Red, Green, Blue };
+       
 
 
         /// <summary>
