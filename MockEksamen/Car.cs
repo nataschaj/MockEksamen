@@ -47,6 +47,8 @@ namespace MockEksamen
             }
         }
 
+        
+
         /// <summary>
         /// fuld property model. Hvis model/value bliver sat til null bliver der smidt en exception.
         /// </summary>

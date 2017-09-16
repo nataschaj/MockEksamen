@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MockEksamen
 {
-    class IllegalDoorsException : Exception
+    public class IllegalDoorsException : Exception
     {
     }
 }

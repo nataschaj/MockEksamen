@@ -12,15 +12,7 @@ namespace MockEksamen.Tests
     public class CarTests
     {
 
-        /// <summary>
-        /// Test som gerne bør vise grøn fordi model er sat til null og den som forventes er "toyota"
-        /// grunden til at den viser grøn er fordi jeg forventer en exception
-        /// Null exception kommer frem med at den ikke må sættes til nul.
-        /// </summary>
-        //[TestMethod()]
-        //[ExpectedException(typeof(ArgumentNullException))] ///hvis dette fjernes vil testen vise rød
-        //public void ModelTestNull()
-        //{
+
 
         //    //Arrange
         //    var modeltest = new Car();
@@ -33,34 +25,36 @@ namespace MockEksamen.Tests
         //    Assert.AreEqual("Toyota", model);
         //}
 
+        /// <summary>
+        /// Jeg har sat doors til at være over 5, hvilket gør at exception bliver smidt
+        /// </summary>
+        [TestMethod()]
+        [ExpectedException(typeof(IllegalDoorsException))]
+        public void CarDoorTest()
+        {
+            var doorstest = new Car("toyota", 6, "1234ACS");
+        }
 
+        /// <summary>
+        /// Jeg har sat doors til at være over 5, hvilket gør at exception bliver smidt
+        /// </summary>
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void CarModelTest()
+        {
+            var modeltest = new Car("", 3, "1234ACS");
+        }
 
+        /// <summary>
+        /// Jeg har sat doors til at være over 5, hvilket gør at exception bliver smidt
+        /// </summary>
+        [TestMethod()]
+        [ExpectedException(typeof(SpecificCharactertException))]
+        public void CarRegNoTest()
+        {
+            var regnotest = new Car("Toyota", 3, "123num");
+        }
 
-        //IGNORER
-        //[TestMethod()]
-        ////[ExpectedException(typeof(ArgumentNullException))]
-        //public void DoorTest()
-        //{
-        //    //Arrange
-        //    var doortest = new Car(); 
-        //    doortest.doors = 1;
-
-        //    //Act
-        //    int door = doortest.doors;
-        //    //Assert
-        //    Assert.AreEqual(1, door);
-        //}
-
-        //[TestMethod()]
-        //[ExpectedException(typeof(ArgumentNullException))]
-        //public void ModelTest()
-        //{
-        //    //Arrange
-        //    var modeltest = new Car();
-        //    //Act
-        //    string model = modeltest.model;
-        //    //Assert
-        //    Assert.AreEqual(3, model);
-        //}
+        
     }
 }
