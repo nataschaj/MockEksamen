@@ -13,16 +13,18 @@ namespace MockEksamen.Tests
     {
 
         /// <summary>
-        /// Test som gerne bør fejl fordi model er sat til null og den som forventes er "toyota"
+        /// Test som gerne bør vise grøn fordi model er sat til null og den som forventes er "toyota"
+        /// grunden til at den viser grøn er fordi jeg forventer en exception
         /// Null exception kommer frem med at den ikke må sættes til nul.
         /// </summary>
         [TestMethod()]
-        //[ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(ArgumentNullException))] //hvis dette fjernes vil testen vise rød
         public void ModelTestNull()
         {
-            
+
             //Arrange
             var modeltest = new Car();
+            //modeltest.model = "Toyota";
             modeltest.model = null; //sætter den til nul for at teste
             //Act
             string model = modeltest.model;
@@ -31,20 +33,22 @@ namespace MockEksamen.Tests
             Assert.AreEqual("Toyota", model);
         }
 
-       
 
-        //IGNORER 
+
+
+        //IGNORER
         //[TestMethod()]
         ////[ExpectedException(typeof(ArgumentNullException))]
         //public void DoorTest()
         //{
         //    //Arrange
-        //    var doortest = new Car();
+        //    var doortest = new Car(); 
+        //    doortest.doors = 1;
 
         //    //Act
         //    int door = doortest.doors;
         //    //Assert
-        //    Assert.AreEqual(2, door);
+        //    Assert.AreEqual(1, door);
         //}
 
         //[TestMethod()]

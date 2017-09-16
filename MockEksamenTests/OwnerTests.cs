@@ -11,16 +11,16 @@ namespace MockEksamen.Tests
     [TestClass()]
     public class OwnerTests
     {
-        [TestMethod()]
+        //[TestMethod()]
         
-        public void OwnerTest()
-        {
-            //Arrange
-            //var address = new Owner();
-            ////Act
-            //string adr = address.adress;
-            ////Assert
-            //Assert.AreEqual("natascha", adr);
-        }
+        //public void OwnerTest()
+        //{
+        //    //Arrange
+        //    //var address = new Owner();
+        //    ////Act
+        //    //string adr = address.adress;
+        //    ////Assert
+        //    //Assert.AreEqual("natascha", adr);
+        //}
     }
 }

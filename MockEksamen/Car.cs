@@ -52,22 +52,25 @@ namespace MockEksamen
             set
             {
                 if (value == null)
-                    throw new NullReferenceException("Må ikke være null");
-                model = value;
+                    throw new ArgumentNullException("Må ikke være null");
+                model = NotNullModel();
             }
         }
 
-        //public string Model()
-        //{
-        //    return model ?? null;
-        //}
+        public string NotNullModel()
+        {
+            return model ?? null;
+        }
 
         /// <summary>
         /// Constructor
         /// </summary>
         public Car()
         {
-
+            //this.model = Model;
+            //this.doors = doors;
         }
+
+
     }
 }
