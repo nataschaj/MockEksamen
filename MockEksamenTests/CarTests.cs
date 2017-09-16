@@ -17,21 +17,21 @@ namespace MockEksamen.Tests
         /// grunden til at den viser grøn er fordi jeg forventer en exception
         /// Null exception kommer frem med at den ikke må sættes til nul.
         /// </summary>
-        [TestMethod()]
-        [ExpectedException(typeof(ArgumentNullException))] ///hvis dette fjernes vil testen vise rød
-        public void ModelTestNull()
-        {
+        //[TestMethod()]
+        //[ExpectedException(typeof(ArgumentNullException))] ///hvis dette fjernes vil testen vise rød
+        //public void ModelTestNull()
+        //{
 
-            //Arrange
-            var modeltest = new Car();
-            //modeltest.model = "Toyota";
-            modeltest.Model = ToString(); //sætter den til nul for at teste
-            //Act
-            string model = modeltest.Model;
+        //    //Arrange
+        //    var modeltest = new Car();
+        //    //modeltest.model = "Toyota";
+        //    modeltest.Model = ToString(); //sætter den til nul for at teste
+        //    //Act
+        //    string model = modeltest.Model;
 
-            //Assert
-            Assert.AreEqual("Toyota", model);
-        }
+        //    //Assert
+        //    Assert.AreEqual("Toyota", model);
+        //}
 
 
 

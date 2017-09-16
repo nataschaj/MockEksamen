@@ -9,7 +9,7 @@ namespace MockEksamen
     /// <summary>
     /// Skal indeholde en fast længde, ellers bliver denne exception smidt
     /// </summary>
-    class SpecificCharactertException : Exception
+    public class SpecificCharactertException : Exception
     {
     }
 }

@@ -9,7 +9,7 @@ namespace MockEksamen
     /// <summary>
     /// Exception når der står for lidt bogstaver/tegn
     /// </summary>
-    class CharacterTooShortException : Exception
+    public class CharacterTooShortException : Exception
     {
 
     }
