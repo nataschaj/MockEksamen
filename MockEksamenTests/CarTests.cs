@@ -18,16 +18,16 @@ namespace MockEksamen.Tests
         /// Null exception kommer frem med at den ikke må sættes til nul.
         /// </summary>
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentNullException))] //hvis dette fjernes vil testen vise rød
+        [ExpectedException(typeof(ArgumentNullException))] ///hvis dette fjernes vil testen vise rød
         public void ModelTestNull()
         {
 
             //Arrange
             var modeltest = new Car();
             //modeltest.model = "Toyota";
-            modeltest.model = null; //sætter den til nul for at teste
+            modeltest.Model = ToString(); //sætter den til nul for at teste
             //Act
-            string model = modeltest.model;
+            string model = modeltest.Model;
 
             //Assert
             Assert.AreEqual("Toyota", model);

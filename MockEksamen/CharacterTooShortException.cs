@@ -8,6 +8,6 @@ namespace MockEksamen
 {
     class CharacterTooShortException : Exception
     {
-        public ArgumentNullException(string paramName);
+        
     }
 }

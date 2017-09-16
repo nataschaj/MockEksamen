@@ -14,15 +14,10 @@ namespace MockEksamen
     {
 
         /// <summary>
-        /// Enum som indeholder bil farverne 
-        /// </summary>
-       
-
-
-        /// <summary>
         /// Door fuld property, hvor value sættes til under 5. Hvis den sættes til over 5 bliver der smidt en exception
         /// </summary>
-        public int doors
+        private int doors;
+        public int Doors
         {
             get { return doors; }
             set
@@ -36,7 +31,8 @@ namespace MockEksamen
         /// <summary>
         /// fuld property reg no. Hvis ikke at reg no sættes til præcis 7, bliver der smidt en exception. 
         /// </summary>
-        public string registrationNo
+        private string registrationNo;
+        public string RegistrationNo
         {
             get { return registrationNo; }
             set
@@ -50,7 +46,8 @@ namespace MockEksamen
         /// <summary>
         /// fuld property model. Hvis model/value bliver sat til null bliver der smidt en exception.
         /// </summary>
-        public string model
+        private string model;
+        public string Model
         {
             get { return model; }
             set
@@ -61,20 +58,31 @@ namespace MockEksamen
             }
         }
 
-        public string NotNullModel()
-        {
-            return model ?? null;
-        }
-
         /// <summary>
         /// Constructor
         /// </summary>
         public Car()
         {
-            //this.model = Model;
-            //this.doors = doors;
+
         }
 
 
+        /// <summary>
+        /// Overload constructor
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="doors"></param>
+        /// <param name="RegistrationNo"></param>
+        public Car(string model, int doors, string RegistrationNo)
+        {
+            this.Doors = doors;
+            this.Model = model;
+            this.RegistrationNo = registrationNo;
+        }
+
+        public string NotNullModel()
+        {
+            return model ?? null;
+        }
     }
 }

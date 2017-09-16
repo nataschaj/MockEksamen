@@ -8,15 +8,11 @@ namespace MockEksamen
 {
     public class Owner
     {
-        //public string address { get; set; }
-        //public string name { get; set; }
-        //public string phone { get; set; }
-
-
         /// <summary>
         /// fuld property name. Hvis navnet er mindre end 4 bliver der smidt en exception. 
         /// </summary>
-        public string name
+        private string name;
+        public string Name
         {
             get { return name; }
             set
@@ -34,7 +30,9 @@ namespace MockEksamen
         /// <summary>
         /// fuld property phone. Hvis phone/value ikke er lig med 8 bliver der smidt en exception
         /// </summary>
-        public string phone
+
+        private string phone;
+        public string Phone
         {
             get { return phone; }
             set
@@ -48,7 +46,8 @@ namespace MockEksamen
         /// <summary>
         /// fuld property adress. Hvis længden sættes til mindre end 6 bliver der smidt en exception
         /// </summary>
-        public string adress
+        private string adress;
+        public string Adress
         {
             get { return adress; }
             set
@@ -65,6 +64,13 @@ namespace MockEksamen
         public Owner()
         {
       
+        }
+
+        public Owner(string adress, string name, string phone)
+        {
+            this.Adress = adress;
+            this.Name = name;
+            this.Phone = phone;
         }
 
        
