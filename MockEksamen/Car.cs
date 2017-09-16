@@ -23,7 +23,7 @@ namespace MockEksamen
             set
             {
                 if (value > 5)
-                    throw new InvalidOperationException("Må ikke være under 5!");
+                    throw new IllegalDoorsException();
                 doors = value;
             }
         }
@@ -38,7 +38,7 @@ namespace MockEksamen
             set
             {
                 if (value.Length != 7)
-                    throw new ArgumentNullException("længden skal være 7 bogstaver");
+                    throw new CharacterTooShortException();
                 registrationNo = value;
             }
         }

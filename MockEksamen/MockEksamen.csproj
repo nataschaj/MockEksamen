@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Car.cs" />
     <Compile Include="CharacterTooShortException.cs" />
+    <Compile Include="IllegalDoorsException.cs" />
     <Compile Include="Owner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
