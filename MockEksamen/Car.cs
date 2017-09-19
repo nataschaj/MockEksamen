@@ -90,9 +90,9 @@ namespace MockEksamen
             this.RegistrationNo = registrationNo;
         }
 
-       public string NotNullModel()
-        {
-            return model ?? null;
-        }
+       //public string NotNullModel()
+       // {
+       //     return model ?? null;
+       // }
     }
 }
