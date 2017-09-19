@@ -47,6 +47,8 @@ namespace MockEksamen
             }
         }
 
+      
+
         /// <summary>
         /// fuld property adress. Hvis længden sættes til mindre end 6 bliver der smidt en exception
         /// </summary>
@@ -77,6 +79,8 @@ namespace MockEksamen
             this.Adress = adress;
             this.Name = name;
             this.Phone = phone;
+
+
         }
 
        
